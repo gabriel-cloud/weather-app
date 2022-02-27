@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link rel="shortcut icon" href="#" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<script type="text/javascript" src="./main.js" defer></script>
+		
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+
+		<div class="container border rounded">
+			<div class="row">
+				<div class="col bg-warning border-bottom border-danger border-2">
+					<nav class="navbar">
+						<div class="container-fluid">
+							<p class="my-2 fw-bold" id="location">
+								Search for a location or hit the location button
+							</p>
+							<form class="d-flex">
+								<buttom
+									class="btn btn-light btn-outline-success mx-2"
+									style="inline-block"
+									id="getLocation"
+								>
+									<img
+										src="./resources/img/location.svg"
+										alt=""
+										style="height: 100%; float: right; margin-left: 1rem"
+									/>
+								</buttom>
+								<input
+									class="form-control me-2"
+									type="search"
+									placeholder="Search"
+									aria-label="Search"
+									id="searchBox"
+								/>
+								<button
+									class="btn btn-light btn-outline-success"
+									type="submit"
+									id="searchButton"
+								>
+									Search
+								</button>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div
+						class="my-3 alert alert-warning text-center d-none"
+						role="alert"
+						id="alert"
+					></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="row col-md-3 text-center mx-4">
+					<div class="row">
+						<div class="col">
+							<img src="" alt="" id="imageCondition" />
+						</div>
+						<div class="col my-auto">
+							<p id="temp" class="display-5 fw-bolder"></p>
+							<p></p>
+						</div>
+					</div>
+					<div class="row text-center d-flex flex-nowrap">
+						<div class="col">
+							<p id="condition" class="fw-bold"></p>
+						</div>
+					</div>
+					<div class="row text-center">
+						<div class="col">
+							<p id="wind"></p>
+						</div>
+					</div>
+				</div>
+				<div class="row col-md-8 masterParent disable-scrollbars">
+					<div class="row d-flex flex-nowrap dayAndIcon" 
+						style="white-space: nowrap">
+						<div class="col">
+							<div class="row">
+								<div class="col text-center" id="day0"></div>
+							</div>
+							<div class="row">
+								<div class="col text-center">
+									<img class="weeklyImage" id="imgDay0" src="" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col text-center" id="day1"></div>
+							</div>
+							<div class="row">
+								<div class="col text-center">
+									<img class="weeklyImage" id="imgDay1" src="" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col text-center" id="day2"></div>
+							</div>
+							<div class="row">
+								<div class="col text-center">
+									<img class="weeklyImage" id="imgDay2" src="" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col text-center" id="day3"></div>
+							</div>
+							<div class="row">
+								<div class="col text-center">
+									<img class="weeklyImage" id="imgDay3" src="" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col text-center" id="day4"></div>
+							</div>
+							<div class="row">
+								<div class="col text-center">
+									<img class="weeklyImage" id="imgDay4" src="" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col text-center" id="day5"></div>
+							</div>
+							<div class="row">
+								<div class="col text-center">
+									<img class="weeklyImage" id="imgDay5" src="" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col text-center" id="day6"></div>
+							</div>
+							<div class="row">
+								<div class="col text-center">
+									<img class="weeklyImage" id="imgDay6" src="" alt="" />
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="row">
+								<div class="col text-center" id="day7"></div>
+							</div>
+							<div class="row">
+								<div class="col text-center">
+									<img class="weeklyImage" id="imgDay7" src="" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mx-1">
+						<div class="col">
+							<div class="row changeMe">
+								<div class="col" >
+									<canvas id="myChart" height='150px'></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"
+			defer
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/chartjs-plugin-trendline"
+			defer
+		></script>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.1/chart.min.js"
+			integrity="sha512-5vwN8yor2fFT9pgPS9p9R7AszYaNn0LkQElTXIsZFCL7ucT8zDCAqlQXDdaqgA1mZP47hdvztBMsIoFxq/FyyQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<footer class="footer text-end">v.1.0(cc3fc66)</footer>
+	</body>
+</html>
